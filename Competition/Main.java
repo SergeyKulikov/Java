@@ -3,17 +3,25 @@ import barrier.*;
 import team.*;
 import course.*;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
 /**
  * Lessoning example of animal competition
  *
  * @author (Sergey Kulikov)
- * @version (07.06.2017)
+ * @version (09.06.2017)
  */
-public class Main {
+public class Main extends JFrame{
 	//private Course barriers;
 
 
     public static void main(String[] args) {
+		new Main().start();
+	}
+	
+	public void start() {
 		Course barriers = new Course(
 								new Object[] {
 									new Track(80), 	// first
@@ -42,12 +50,27 @@ public class Main {
 		barriers.doIt(white);
 		barriers.doIt(black);
 		
+        setTitle("Animal's Competition");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setBounds(30, 30, 800, 600);
+		setLayout(new BorderLayout()); // for main window
 		
+		JTextArea tField = new JTextArea("\nThe obstacle course consists of : "+barriers.toString() + "\n\n" +
+							"\nThe white team results: "+white.showResults(true) +
+							"\nThe black team results:"+black.showResults(true));
+							
+		JScrollPane pnl = new JScrollPane(tField);
+		pnl.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		
+		add(pnl);					
+        setVisible(true);
+
+		
+		/*
 		System.out.println("\nThe obstacle course consists of : "+barriers.toString());
-		
-		
 		System.out.println("\nThe white team results: "+white.showResults(true));
 		System.out.println("\nThe black team results:"+black.showResults(true));
+		*/
 		
     }
 }
