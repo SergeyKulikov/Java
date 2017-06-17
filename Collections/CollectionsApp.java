@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.HashSet;
 
 /**
 	1. Создать массив с набором слов (20-30 слов, должны встречаться повторяющиеся):
@@ -29,7 +28,7 @@ public class CollectionsApp {
 	static StringBuilder sb = new StringBuilder();
 	
 	public static void main(String [] arg) {
-		words = article.toUpperCase().split("\\p{P}?[ .:!;]+");
+		words = article.toUpperCase().split("\\p{P}?[ ,.:!;]+");
 		for (String s: words) sb.append(s+" ");	
 		
 		for (int i=0; i<words.length; i++) {
@@ -39,6 +38,7 @@ public class CollectionsApp {
 		}	
 		System.out.printf("We have %d elemets in the list, but only %d of them are unique.\n\n\n", words.length, unq.size());
 		
+		System.out.println("Varant 1 -------------- ");
 		PhoneBook book = new PhoneBook();
 		book.add("Ivanov", "+79260987654", "ivanov@gmail.com");
 		book.add("Petrov", "+79031112233", "perov@mail.ru");
@@ -48,6 +48,18 @@ public class CollectionsApp {
 		System.out.println(book.getPhonesByName("Ivanov"));
 		System.out.println(book.getEmailsByName("Ivanov"));
 		System.out.println(book.getEmailsByName("Rabinovich"));
+		
+		System.out.println("Varant 2 -------------- ");
+		PhoneBookMap book1 = new PhoneBookMap();
+		book1.add("Rabinovich", "+79260987654", "rabinovich@gmail.com");
+		book1.add("Petrov", "+79031112233", "perov@mail.ru");
+		book1.add("Rabinovich", "+180098765512", "rabinovich@microsoft.com");
+		book1.add("Ivanov", "+79260987684", "ivanov89@gmail.com");
+		
+		System.out.println(book1.getPhonesByName("Petrov"));
+		System.out.println(book1.getPhonesByName("Rabinovich"));
+		System.out.println(book1.getEmailsByName("Rabinovich"));
+		
 	}
 	
 	static class PhoneBookItem {
@@ -81,6 +93,47 @@ public class CollectionsApp {
 			for (int i=0; i<items.size(); i++) {
 				if (items.get(i).secondName == secondName) 
 					tmp.add(items.get(i).email);
+			}
+			return (secondName+"'s e-mails "+(tmp.size()>1 ? "are " : "is ")+tmp.toString());
+		}
+	}
+	
+	
+	static class PhoneBookMap {
+		public Map<String, ArrayList<PhoneBookItem>> items = new TreeMap<String, ArrayList<PhoneBookItem>>();
+		
+		public void add(String secondName, String phone, String email) {
+			PhoneBookItem item = new PhoneBookItem();
+				
+			item.secondName = secondName;
+			item.phone = phone;
+			item.email = email;
+			
+			if (!items.containsKey(secondName)) {
+				ArrayList<PhoneBookItem> list = new ArrayList<PhoneBookItem>();
+				list.add(item);
+				items.put(secondName, list);
+			}
+			else {
+				ArrayList<PhoneBookItem> list = items.get(secondName);
+				list.add(item);
+			}
+		}
+
+		String getPhonesByName(String secondName) {
+			ArrayList<String> tmp = new ArrayList<String>();
+			ArrayList<PhoneBookItem> list = items.get(secondName);
+			for (int i=0; i<list.size(); i++) {
+				tmp.add(list.get(i).phone);
+			}
+			return (secondName+"'s phones "+(tmp.size()>1 ? "are " : "is ")+tmp.toString());
+		}
+		
+		String getEmailsByName(String secondName) {
+			ArrayList<String> tmp = new ArrayList<String>();
+			ArrayList<PhoneBookItem> list = items.get(secondName);
+			for (int i=0; i<list.size(); i++) {
+				tmp.add(list.get(i).email);
 			}
 			return (secondName+"'s e-mails "+(tmp.size()>1 ? "are " : "is ")+tmp.toString());
 		}
