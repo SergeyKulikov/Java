@@ -105,8 +105,8 @@ class J2L5_1 {
 		finishTime = System.currentTimeMillis();
 		
 		time2 = finishTime-startTime;
-		System.out.println("Totally completed in " + (time2)+ " msec for "+THREADS+" threads.");
-		System.out.printf("\nThreads work in %f times faster!", (float)((float)time1/(float)time2));
+		System.out.println("\n\nTotally completed in " + (time2)+ " msec for "+THREADS+" threads.");
+		System.out.printf("Threads work in %f times faster!", (float)((float)time1/(float)time2));
 		
 		rez = Arrays.equals(arr, arrThreads); // Сравнили результаты прямого расчета и по кускам.
 		System.out.printf("\nThe values of the arrays are%s the same.", rez ? "" : "nt\'t");
