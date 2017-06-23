@@ -28,108 +28,88 @@ Threads work in 3,693620 times faster!
 The values of the arrays are the same.
 
 
-В втором варианте J2L5_1 смотрел как меняется общая скорость расчета в зависимости от количества потоков. У меня скорость расчета начала падать после 250 потоков.
+Во втором варианте J2L5_1 смотрел как меняется общая скорость расчета в зависимости от количества потоков. У меня скорость расчета начала падать после 250 потоков.
 
-Totally completed in 11652 msec.
+Totally completed in 8771 msec.
 
 
 
-Totally completed in 2076 msec for 50 threads.
-
-Threads work in 5,612717 times faster!
+Totally completed in 1564 msec for 50 threads.
+Threads work in 5,608056 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1671 msec for 100 threads.
-
-Threads work in 6,973070 times faster!
+Totally completed in 1311 msec for 100 threads.
+Threads work in 6,690313 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1633 msec for 150 threads.
-
-Threads work in 7,135334 times faster!
+Totally completed in 1569 msec for 150 threads.
+Threads work in 5,590185 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1636 msec for 200 threads.
-
-Threads work in 7,122250 times faster!
+Totally completed in 1581 msec for 200 threads.
+Threads work in 5,547755 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1633 msec for 250 threads.
-
-Threads work in 7,135334 times faster!
+Totally completed in 1573 msec for 250 threads.
+Threads work in 5,575970 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1685 msec for 300 threads.
-
-Threads work in 6,915133 times faster!
+Totally completed in 1562 msec for 300 threads.
+Threads work in 5,615237 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1662 msec for 350 threads.
-
-Threads work in 7,010830 times faster!
+Totally completed in 1569 msec for 350 threads.
+Threads work in 5,590185 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1644 msec for 400 threads.
-
-Threads work in 7,087591 times faster!
+Totally completed in 1908 msec for 400 threads.
+Threads work in 4,596960 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1660 msec for 450 threads.
-
-Threads work in 7,019277 times faster!
+Totally completed in 1780 msec for 450 threads.
+Threads work in 4,927528 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1678 msec for 500 threads.
-
-Threads work in 6,943981 times faster!
+Totally completed in 1607 msec for 500 threads.
+Threads work in 5,457996 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1701 msec for 550 threads.
-
-Threads work in 6,850088 times faster!
+Totally completed in 1694 msec for 550 threads.
+Threads work in 5,177686 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1874 msec for 600 threads.
-
-Threads work in 6,217716 times faster!
+Totally completed in 1600 msec for 600 threads.
+Threads work in 5,481875 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1867 msec for 650 threads.
-
-Threads work in 6,241028 times faster!
+Totally completed in 1629 msec for 650 threads.
+Threads work in 5,384285 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1888 msec for 700 threads.
-
-Threads work in 6,171610 times faster!
+Totally completed in 1659 msec for 700 threads.
+Threads work in 5,286920 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1875 msec for 750 threads.
-
-Threads work in 6,214400 times faster!
+Totally completed in 1640 msec for 750 threads.
+Threads work in 5,348171 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1856 msec for 800 threads.
-
-Threads work in 6,278017 times faster!
+Totally completed in 1623 msec for 800 threads.
+Threads work in 5,404190 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1792 msec for 850 threads.
-
-Threads work in 6,502232 times faster!
+Totally completed in 1657 msec for 850 threads.
+Threads work in 5,293301 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1775 msec for 900 threads.
-
-Threads work in 6,564507 times faster!
+Totally completed in 1653 msec for 900 threads.
+Threads work in 5,306110 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1787 msec for 950 threads.
-
-Threads work in 6,520425 times faster!
+Totally completed in 1627 msec for 950 threads.
+Threads work in 5,390903 times faster!
 The values of the arrays are the same.
 
-Totally completed in 1825 msec for 1000 threads.
-
-Threads work in 6,384657 times faster!
+Totally completed in 1616 msec for 1000 threads.
+Threads work in 5,427599 times faster!
 The values of the arrays are the same.
