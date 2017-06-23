@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 
 class J2L5 {
-	static final int THREADS = 50;				 	// Количество потоков (может больше кол-ва ядер)
+	static final int THREADS = 8;				 	// Количество потоков (может больше кол-ва ядер)
 	static final int SIZE = 10000000;			 	// Размер массива для обработки
 	static final int H = SIZE / THREADS;		 	// Делим массив на количество потоков
 	static final int HR = SIZE-(H * THREADS);	 	// Возможно есть остаток от SIZE
