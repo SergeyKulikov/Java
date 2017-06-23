@@ -31,7 +31,7 @@ class J2L5_1 {
 		time1 = finishTime-startTime;
 		System.out.println("Totally completed in " + (time1)+ " msec.\n");
 		
-		for (int t=50; t<=600; t+=50) 
+		for (int t=50; t<=1000; t+=50) 
 			threadCalcalate(t, v1.arr, time1);
 		
     }		
